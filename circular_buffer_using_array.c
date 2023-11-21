@@ -74,12 +74,12 @@ cirBuf_t* circularBufferInit(uint8_t n)
 	{
 		return NULL;
 	}
-	cirBuf_t *cir_buf = (cirBuf_t*)malloc(sizeof(cirBuf_t*));
+	cirBuf_t *cir_buf = (cirBuf_t*)malloc(sizeof(cirBuf_t));
     cir_buf->head = 0;
     cir_buf->tail = 0;
     cir_buf->curr_size = 0;
     cir_buf->total_size = n;
-    cir_buf->cbuf = (char*)malloc(sizeof(char*)*n);
+    cir_buf->cbuf = (char*)malloc(sizeof(char)*n);
     return cir_buf;
 }
 
